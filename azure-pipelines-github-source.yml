@@ -12,10 +12,10 @@ variables:
   azureSubscription: 'd2f87756-940a-4e41-898a-0d4d7f3fc597'
 
   # Web app name
-  webAppName: 'env-viewer-app'
+  webAppName: 'env-viewer'
 
   # Environment name
-  environmentName: 'env-viewer-app'
+  environmentName: 'env-viewer'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -68,7 +68,7 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: env-viewer-app'
+            displayName: 'Azure Web App Deploy: env-viewer'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
