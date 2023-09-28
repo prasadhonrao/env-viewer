@@ -11,7 +11,7 @@ Before you begin, ensure you have [Docker](https://www.docker.com/) installed on
 You can build the Docker image using the following command:
 
 ```bash
-docker build -t node-env-viewer .
+docker build -t env-viewer .
 ```
 
 ## Running the Docker Container
@@ -19,10 +19,10 @@ docker build -t node-env-viewer .
 To run a Docker container using the image you've built, you can use the following command:
 
 ```bash
-docker run -d --name node-env-viewer -p 3000:3000 node-env-viewer
+docker run -d --name env-viewer -p 3000:3000 env-viewer
 ```
 
-This command will start a container named `node-env-viewer` based on the `node-env-viewer` image, which runs the Node.js application and listens on port 3000.
+This command will start a container named `env-viewer` based on the `env-viewer` image, which runs the Node.js application and listens on port 3000.
 
 ## Accessing the Environment Variables
 
@@ -33,8 +33,8 @@ Once the container is running, you can access the environment variables by openi
 When you're done with the container, you can stop and remove it using the following commands:
 
 ```bash
-docker stop node-env-viewer
-docker rm node-env-viewer
+docker stop env-viewer
+docker rm env-viewer
 ```
 
 ## Cleaning Up
@@ -42,7 +42,7 @@ docker rm node-env-viewer
 To remove the Docker image you built, you can use the following command:
 
 ```bash
-docker rmi node-env-viewer
+docker rmi env-viewer
 ```
 
 ## Customizing the Application
